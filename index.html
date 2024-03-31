@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGC Tourist Agency</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <link rel="stylesheet" href="cssproject.css">
+</head>
+<body>
+                        <!-- CheckPoint one HTML   -->
+ 
+    <div id="navbar"> 
+        <div id="brand"> 
+            <img src="img/brand_image.jpg" alt="Brand Logo">
+            <span style="font-size: larger;">World Wide Travels</span>
+        </div>
+
+        <ul id="nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Book</a></li>
+            <li id="packages"><a href="#">Packages</a> 
+                <ul>
+                    <li><a href="#">United State</a></li>
+                    <li><a href="#">India</a></li>
+                    <li><a href="#">France</a></li>
+                    <li><a href="#">Germany</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+
+        <div id="login-register">
+          <button><a style="color: black !important;" href="login/login.html">Login</a></button>
+          <button><a style="color: black !important;"  href="register/register.html">Register</a></button>
+        </div>
+    </div>
+ 
+    <div id="background-image"> 
+        <div id="welcome-text">
+            <h1>Welcome to World Wide Travel</h1>
+        </div>
+
+        <div id="visit-text">
+            <h2>Visit <span id="place-name">Placename</span></h2>
+        </div>
+
+        <a href="#" id="book-now-btn">Book Now</a>
+    </div>
+
+
+
+                    <!-- Check Point two HTML  -->
+
+    <h1 class="main-heading">Plan Trip</h1>
+    <div class="main-container-1">
+        <div class="left-main-container">
+            <img src="package_img/brand.jpg" alt="Travel">
+        </div>
+        <div class="right-main-container">
+            <form>
+                <div class="mb-3">
+                  <label for="destination">Where To</label>
+                    <input required
+                      type="text"
+                      class="form-control"
+                      id="destination"
+                      list="bookingPlaces"
+                      placeholder="Choose Location"
+                      required
+                    />
+                    <datalist id="bookingPlaces">
+                      <option value="UAE">UAE</option>
+                      <option value="Australia">Australia</option>
+                      <option value="India">India</option>
+                      <option value="France">France</option>
+                      <option value="Italy">Italy</option>
+                    </datalist>
+                </div><br>
+                <label for="people">How Many Person:</label>
+                <input required style="padding: 10px; border-radius: 10px;" type="number" id="people" name="people" min="1"><br>
+                <label for="start-date">Start Date:</label>
+                <input required style="padding: 10px; border-radius: 10px;" type="date" id="start-date" name="start-date" value="" onchange="setMinEndDate()"><br>
+                <label for="end-date">End Date:</label>
+                <input required style="padding: 10px; border-radius: 10px;" type="date" id="end-date" name="end-date" min="" disabled><br>
+                <label for="description">Description:</label><br>
+                <textarea style="padding: 10px; border-radius: 10px;" id="description" name="description" rows="2" cols="50" minlength="50" maxlength="500"></textarea><br>
+                <button style="padding: 10px; border-radius: 10px; background-color: rgb(194, 81, 0); border: none;" type="button" onclick="bookNow()">Book Now</button>
+            </form>
+        </div>
+    </div>
+    
+    <h1 class="main-heading" style="background-color: #1c1c19;"> PACKAGES </h1>
+    <div class="container mt-4" id="product">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="package_img/1-1.jpg" class="img-fluid">
+              <h3 align="center"> Sydeny Opera House </h3>
+              <h6>One of the most iconic buildings in the world the Sydney Opera House is an architectural masterpiece and vibrant performance space</h6>
+              <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <h5> <span id="productprice">Price : $500</span></h5>
+              <h5> <span id="productprice">Rating : <div class="rating">
+               
+                  <input type="radio" id="star5" name="rating" value="5" checked disabled><label for="star5">☆</label>
+                  <input type="radio" id="star4" name="rating" value="4" disabled><label for="star4">☆</label>
+                  <input type="radio" id="star3" name="rating" value="3" disabled ><label for="star3">☆</label>
+                  <input type="radio" id="star2" name="rating" value="2" disabled><label for="star2">☆</label>
+                  <input type="radio" id="star1" name="rating" value="1" disabled><label for="star1">☆</label>
+             
+              </div>
+            </span></h5>
+                <button class="btn btn-success">Book Now</button>  
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="package_img/1-2.jpg" class="img-fluid">
+              <h3 align="center"> Sydeny Harbour </h3>
+              <h6>Secluded beaches, quiet coves and soaring headlands predominate this harbor, which is considered one of the world's most beautiful.</h6>
+              <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <h5> <span id="productprice">Price : $550</span></h5>
+              <h5> <span id="productprice">Rating : <div class="rating">
+               
+                <input type="radio" id="star10" name="star10" value="5" disabled><label for="star10">☆</label>
+                <input type="radio" id="star9" name="star9" value="4"  disabled><label for="star9">☆</label>
+                <input type="radio" id="star8" name="star8" value="3" disabled><label for="star8">☆</label>
+                <input type="radio" id="star7" name="star7" value="2" checked disabled><label for="star7">☆</label>
+                <input type="radio" id="star6" name="star6" value="1" disabled><label for="star6">☆</label>
+           
+            </div>
+          </span></h5>
+
+              <button class="btn btn-success">Book Now</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="package_img/1-3.jpg" class="img-fluid">
+              <h3 align="center"> Royal Botanic Gardens </h3>
+              <h6>Visit Melbourne's inner-city oasis. Over 10,000 plant species from around the world are presented in a kaleidoscope of colour and texture.</h6>
+              <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <h5> <span id="productprice">Price : $200</span></h5>
+              <h5> <span id="productprice">Rating : <div class="rating">
+                <input type="radio" id="star15" name="star15" value="5" disabled><label for="star15">☆</label>
+                <input type="radio" id="star14" name="star14" value="4" disabled><label for="star14">☆</label>
+                <input type="radio" id="star13" name="star13" value="3" checked disabled><label for="star13">☆</label>
+                <input type="radio" id="star12" name="star12" value="2" disabled><label for="star12">☆</label>
+                <input type="radio" id="star11" name="star11" value="1" disabled><label for="star11">☆</label>
+           
+            </div>
+          </span></h5>
+
+              <button class="btn btn-success">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="koodli.jpg" class="img-fluid">
+              <h3 align="center"> Koodali Temple </h3>
+              <h6>The Rameshvara temple is a 12th-century Shiva temple in Kudli, Shimoga district, Karnataka India. It is an early non-ornate, Hoysala construction with simpler Vesara style</h6>
+              <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <h5> <span id="productprice">$200</span></h5>
+              <button class="btn btn-success">Explore Now</button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="package_img/2-1.jpg" class="img-fluid">
+              <h3 align="center"> Burj Khalifa
+              </h3>
+              <h6>Standing over 2,700 feet and 163 floors high, this record-breaking skyscraper in downtown Dubai is the tallest structure in the world.
+              </h6>
+              <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <h5> <span id="productprice">Price : $250</span></h5>
+              <h5> <span id="productprice">Rating : <div class="rating">
+                <input type="radio" id="star20" name="star20" value="5" checked disabled><label for="star20">☆</label>
+                <input type="radio" id="star19" name="star19" value="4" disabled><label for="star19">☆</label>
+                <input type="radio" id="star18" name="star18" value="3"  disabled><label for="star18">☆</label>
+                <input type="radio" id="star17" name="star17" value="2" disabled><label for="star17">☆</label>
+                <input type="radio" id="star16" name="star16" value="1" disabled><label for="star16">☆</label>
+           
+            </div>
+          </span></h5>
+
+              <button class="btn btn-success">Book Now</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="package_img/2-2.jpg" class="img-fluid">
+              <h3 align="center"> Burj Al Arab </h3>
+              <h6>One of the tallest hotels in the world, the unique white sail shape of this luxury hotel on Jumeirah Beach is iconic to Dubai's skyline.</h6>
+              <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <h5> <span id="productprice">Price : $200</span></h5>
+              <h5> <span id="productprice">Rating : <div class="rating">
+                <input type="radio" id="star25" name="rating25" value="5"  disabled><label for="star25">☆</label>
+                <input type="radio" id="star24" name="rating24" value="4" disabled><label for="star24">☆</label>
+                <input type="radio" id="star23" name="rating23" value="3"  disabled><label for="star23">☆</label>
+                <input type="radio" id="star22" name="rating22" value="2" checked disabled><label for="star22">☆</label>
+                <input type="radio" id="star21" name="rating21" value="1" disabled><label for="star21">☆</label>
+           
+            </div>
+          </span></h5>
+              <button class="btn btn-success">Book Now</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="package_img/2-3.jpg" class="img-fluid">
+              <h3 align="center"> The Dubai Foundation </h3>
+              <h6>Choreographed to music, the Dubai Fountain shoots water as high as 500 feet –that’s as high as a 50-story building..</h6>
+              <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <h5> <span id="productprice">Price : $150</span></h5>
+              <h5> <span id="productprice">Rating : <div class="rating">
+                <input type="radio" id="star30" name="rating30" value="5" disabled><label for="star30">☆</label>
+                <input type="radio" id="star29" name="rating29" value="4" checked disabled><label for="star29">☆</label>
+                <input type="radio" id="star28" name="rating28" value="3" disabled><label for="star28">☆</label>
+                <input type="radio" id="star27" name="rating27" value="2" disabled><label for="star27">☆</label>
+                <input type="radio" id="star26" name="rating26" value="1" disabled><label for="star26">☆</label>
+           
+            </div>
+          </span></h5>
+
+              <button class="btn btn-success">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="nandhi.jpg" class="img-fluid">
+              <h3 align="center"> Nandhi Hills </h3>
+              <h6>The hills are near the town Nandi. In traditional belief, the hills are the origin of the Arkavathy river, Ponnaiyar River, Palar River, Papagni River and Penna River. Watching the sunrise at Nandi Hills is popular with tourists. The first ever SAARC summit hosted by India was held at Nandi Hills in 1986</h6>
+              <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <h5> <span id="productprice">$200</span></h5>
+              <button class="btn btn-success">Explore Now</button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="package_img/3-1.jpg" class="img-fluid">
+              <h3 align="center"> Taj Mahal </h3>
+              <h6>The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in Agra, Uttar Pradesh, India. It was commissioned in 1631 by the fifth Mughal emperor, Shah Jahan to house the tomb of his beloved wife, Mumtaz Mahal</h6>
+              <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <h5> <span id="productprice">Price : $300</span></h5>
+              <h5> <span id="productprice">Rating : <div class="rating">
+                <input type="radio" id="star35" name="rating35" value="5" checked disabled><label for="star35">☆</label>
+                <input type="radio" id="star34" name="rating34" value="4" disabled><label for="star34">☆</label>
+                <input type="radio" id="star33" name="rating33" value="3" disabled><label for="star33">☆</label>
+                <input type="radio" id="star32" name="rating32" value="2" disabled><label for="star32">☆</label>
+                <input type="radio" id="star31" name="rating31" value="1" disabled><label for="star31">☆</label>
+           
+            </div>
+          </span></h5>
+
+              <button class="btn btn-success">Book Now</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="package_img/3-2.jpg" class="img-fluid">
+              <h3 align="center"> Qutub Minar              </h3>
+              <h6>Construction on this sandstone minaret was begun in 1192. Surrounded by other historical sites, it is the most popular monument in India.</h6>
+              <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <h5> <span id="productprice">Price : $150</span></h5>
+              <h5> <span id="productprice">Rating : <div class="rating">
+                <input type="radio" id="star40" name="rating40" value="5"  disabled><label for="star40">☆</label>
+                <input type="radio" id="star39" name="rating39" value="4" checked disabled><label for="star39">☆</label>
+                <input type="radio" id="star38" name="rating38" value="3" disabled><label for="star38">☆</label>
+                <input type="radio" id="star37" name="rating37" value="2" disabled><label for="star37">☆</label>
+                <input type="radio" id="star36" name="rating36" value="1" disabled><label for="star36">☆</label>
+           
+            </div>
+          </span></h5>
+
+              <button class="btn btn-success">Book Now</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="package_img/3-3.jpg" class="img-fluid">
+              <h3 align="center"> Swaminarayan Akshardham              </h3>
+              <h6>Fantastic site to visit - unimaginable architechture, great theme show, diaorama and I max presentation. If any tourist, irresepctive of his religion or creed, has half a day to spare, this is a must see.</h6>
+              <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <h5> <span id="productprice">Price : $200</span></h5>
+              <h5> <span id="productprice">Rating : <div class="rating">
+                <input type="radio" id="star45" name="rating45" value="5"  disabled><label for="star45">☆</label>
+                <input type="radio" id="star44" name="rating44" value="4" checked disabled><label for="star44">☆</label>
+                <input type="radio" id="star43" name="rating43" value="3" disabled><label for="star43">☆</label>
+                <input type="radio" id="star42" name="rating42" value="2" disabled><label for="star42">☆</label>
+                <input type="radio" id="star41" name="rating41" value="1" disabled><label for="star41">☆</label>
+           
+            </div>
+          </span></h5>
+              <button class="btn btn-success">Book Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-md-3">
+          <div class="card">
+            <div class="card-body">
+              <img src="glass bridge.jpg" class="img-fluid">
+              <h3 align="center"> Glass bridge </h3>
+              <h6>"Glass Bridge - Madikeri, it's 32mtrs lnt and 78ft hights at the End.The front view is the Raja Seat - Madikeri and mountains nature,This is Private Property with Beautiful Coffee Plantation Surrounded</h6>
+              <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <h5> <span id="productprice">$100</span></h5>
+              <button class="btn btn-success">Explore Now</button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>  
+    
+     
+    <h1 class="main-heading" id="services-heading" style="background-color: #505c50"> Services </h1>
+    <div class="container" id="rating">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <!-- <img src="travel.jpg"> -->
+              <h3>Affordable Hotel</h3>
+            <p>Find the best deals on accommodations for your trip.</p>
+            <ul>
+                <li>Cambridge Lodge</li>
+                <li>Palms Hotel</li>
+                <li>Hotel SunShine</li>
+                <li>Paradise Residency</li>
+                <!-- Add more hotels here as needed -->
+            </ul>
+            
+          </div>
+        </div>
+        </div>
+        
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <!-- <img src="life.jpg"> -->
+              <h3>Food & Drinks</h3>
+              <p>Explore a variety of dining options, from local cuisine to international flavors.</p>
+              <ul>
+                  <li>Anzac Biscuits</li>
+                  <li>Macadamia Nuts</li>
+                  <li>Roasted Lamb</li>
+                  <li>Meat Pies</li>
+                  <!-- Add more hotels here as needed -->
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <!-- <img src="summmer.jpg"> -->
+
+              <h3>Safety Guide</h3>
+              <p>Get tips and recommendations to ensure a safe and enjoyable travel experience.</p>
+              <ul>
+                  <li>Don't wear flashy jewelry</li>
+                  <li>Drink responsibly</li>
+                  <li>Be smart about your money</li>
+                 
+                  <!-- Add more hotels here as needed -->
+              </ul>            </div>
+           
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <!-- <img src="adventure.png"> -->
+              <h3>Amenities List</h3>
+            <p>Check Bellow facilities for your trip.</p>
+            <ul>
+                <li>Consulting Services</li>
+                <li>Hotel Reservation</li>
+                <li>Car Rental Servicese</li>
+                <li>Itinerary Planning</li>
+                <!-- Add more hotels here as needed -->
+            </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+                <!-- Check Point three HTML  -->
+    <h1 class="main-heading">GALLERY</h1>    
+    <div class="galary-section-container">
+        <div class="container">
+            <img src="Galary/gal1.jpg">
+            <img src="Galary/gal2.jpg">
+            <img src="Galary/gal3.jpg">
+            <img src="Galary/gal4.jpg">
+            <img src="Galary/gal5.jpg">
+            <img src="Galary/gal6.jpg">
+            <img src="Galary/gal7.jpg">
+        </div>
+    </div>        
+
+    <h1 class="main-heading" style="padding: 1%; background-color:3f3431; margin: 0;">About Us</h1>
+    <div class="about-container">
+        <div class="right-about-container" style="width: 50% !important; ">
+            <img src="AboutUs/worldWide.jpg" alt="travel dog image">
+        </div>
+        <div class="left-about-container" style="width: 50% !important; ">
+          <p>World Wide Travels is a family-owned tour operator and travel agency located in Detton, USA. 
+          We specialize in tours to France but are always expanding and enhancing our wide range of offers, as well as adding new and exciting tours of Britain, Italy, Eastern Europe, Mexico and the Caribbean.  
+           World wide Travels was founded in 1985 by Jim & Teresa Kelly and since that humble beginning it has grown into a trusted resource that has helped tens of thousands of people better enjoy their travel.
+         </p>  </div>
+    </div>
+
+
+    <div class="footer-container">
+        <div class="address-container">
+            <p><h5>World Wide Travels</h5></p>
+            <p>Designed by Cyber Hub Consultancy</p>
+            
+        </div>
+        <div class="social-media-container">
+            <i class="fa fa-facebook" style="color: white; font-size: 25px; margin: 20px;"></i>
+            <i class="fa fa-instagram" style="color: white; font-size: 25px; margin: 20px;"></i>
+            <i class="fa fa-linkedin" style="color: white; font-size: 25px; margin: 20px;"></i>
+            <i class="fa fa-whatsapp" style="color: white; font-size: 25px; margin: 20px;"></i>
+        </div>
+    </div>
+    <p style="color: white; text-align: center; background-color: rgb(61 61 53);; margin-bottom: 0;">© 2024 World Wide Travels. All Rights Reserved.</p>
+
+    <script src="projectscript.js"></script>
+</body>
+</html>

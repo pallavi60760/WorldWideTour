@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        .gender-label {
+            margin-right: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .btn-register {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-register:hover {
+            background-color: #45a049;
+        }
+        .login-link {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Register</h2>
+    <form id="registerForm" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+        </div>
+        <div class="form-group">
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="contact" required>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label class="gender-label">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+        </div>
+        <button type="submit" class="btn-register">Register</button>
+    </form>
+    <div class="login-link">
+        Already have an account? <a href="../login/login.html">Login</a>
+    </div>
+</div>
+
+<script>
+    function validateForm() {
+        var fullname = document.getElementById("fullname").value;
+        var contact = document.getElementById("contact").value;
+        var dob = document.getElementById("dob").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var gender = document.querySelector('input[name="gender"]:checked');
+
+        if (!fullname || !contact || !dob || !email || !password || !gender) {
+            alert("All fields are required.");
+            return false;
+        }
+
+        // You can add more specific validation here, like checking email format, password strength, etc.
+
+        return true;
+    }
+</script>
+
+</body>
+</html>
